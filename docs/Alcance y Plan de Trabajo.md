@@ -165,3 +165,28 @@ secundario (ejemplo: si el filtro por facultad presenta problemas, se mantendrá
 ● Control de Versiones (Git): Cada funcionalidad se desarrollará en una rama
 independiente, antes de fusionar a la rama principal realizaremos una previa
 verificación de que el código no rompe la compilación.
+
+## Requisitos tecnicos y seguimiento de entrega
+
+Esta seccion complementa las restricciones tecnicas y las funcionalidades descritas en este documento. Los requisitos especifican lo que se debe cumplir; no certifican por si solos que el proyecto compile ni que las funciones esten implementadas.
+
+### Plataforma y herramientas
+- Motor: Unity 6000.6.3f1, segun ProjectSettings/ProjectVersion.txt.
+- Lenguaje de programacion: C#, conforme al alcance del proyecto.
+- Plataforma de entrega: Android; la version minima indicada en este documento es Android 7.0 (API 24).
+- El equipo de desarrollo debe tener instalado Unity con Android Build Support y las herramientas SDK, NDK y OpenJDK compatibles con la version de Unity del proyecto. Se deben documentar o fijar sus versiones exactas para que las compilaciones sean reproducibles.
+- El juego debe poder instalarse y ejecutarse en un dispositivo Android compatible y probarse en el dispositivo objetivo antes de la entrega.
+- La conectividad a internet movil o Wi-Fi se mantiene como supuesto del proyecto; cualquier funcion que dependa de red debe indicar sus requisitos y comportamiento sin conexion.
+
+### Compilacion automatica y entrega
+- Cada cambio en main y cada pull request dirigido a main debe ejecutar la compilacion Unity para Android mediante GitHub Actions.
+- El flujo debe usar la licencia de Unity y la configuracion segura requerida por el servicio de CI; las credenciales se guardan como secretos del repositorio y nunca en los archivos versionados.
+- Una compilacion se considera correcta solo si la accion termina sin errores y genera el APK como artefacto descargable. La liberacion del APK no sustituye una compilacion automatica exitosa.
+- La revision recibida informa que el proyecto no compila. Por tanto, este requisito sigue pendiente hasta corregir la causa y verificar una ejecucion exitosa del flujo Unity CI para Android. El repositorio contiene el flujo .github/workflows/unity.yml, pero su existencia no demuestra que la compilacion funcione.
+
+### Estado de entregas segun revision y comprobacion del repositorio
+- [x] Documentacion en Markdown: se encuentran las versiones .md en docs/ y los PDF originales fueron retirados de esa carpeta.
+- [x] APK publicado: existe la seccion de Releases (https://github.com/CRiPTA22/juego-maricuentos/releases) con la version v1.0; la revision indica que alli se publico el APK.
+- [ ] Compilacion automatica: pendiente, segun el error de compilacion reportado; requiere una ejecucion exitosa en GitHub Actions.
+- [ ] Codigo fuente: la revision recibida marca esta observacion como atendida, pero en el arbol actual de main no aparece la carpeta Assets/ ni se identifican scripts C# del juego. Verificar la entrega y agregar el proyecto fuente completo si esta marca no corresponde a una correccion posterior.
+- [ ] Funcionalidades de menu, ajustes, salida, pausa e interaccion con el texto: pendientes de implementacion o pruebas segun la retroalimentacion; consultar los criterios de aceptacion detallados en Historia de usuario (./Historia%20de%20usuario.md).
