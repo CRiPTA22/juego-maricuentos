@@ -148,3 +148,58 @@ cada funcionalidad para considerarse correctamente implementada. Además, la pri
 permite al equipo ver cuáles funcionalidades deben ser desarrolladas primero.
 En conclusión, este documento sirve como una base para las siguientes etapas del proyecto de
 software, facilitando la planificación, el desarrollo y la posterior validación del videojuego.
+
+## Requisitos detallados de las funcionalidades
+
+Los criterios siguientes describen el comportamiento esperado; no significan que la funcionalidad ya este implementada. Segun la retroalimentacion recibida, estas funciones estan pendientes de implementacion o validacion.
+
+### HU-01 - Menu de inicio
+**Historia:** Como jugador, quiero encontrar las opciones principales en una pantalla inicial para iniciar una historia, ajustar preferencias o salir.
+
+**Criterios de aceptacion:**
+- Al abrir la aplicacion se muestra el menu de inicio.
+- El menu presenta opciones identificables para iniciar el juego, abrir ajustes y salir.
+- Iniciar el juego abre la historia disponible en esta entrega; si hay mas de una historia, permite elegirla antes de comenzar.
+- Cada opcion abre la pantalla correspondiente y no deja botones sin respuesta.
+
+### HU-02 - Ajustes de audio y controles
+**Historia:** Como jugador, quiero ajustar el sonido y los controles para adaptar el juego a mis preferencias.
+
+**Criterios de aceptacion:**
+- Permite subir, bajar y silenciar el volumen de la musica y de los efectos de sonido por separado.
+- Los cambios de volumen se aplican inmediatamente y se reflejan en los controles de la interfaz.
+- Permite consultar y configurar los controles disponibles; ofrece una opcion para restaurar los valores predeterminados.
+- Las preferencias se conservan al cerrar y volver a abrir el juego.
+- Los ajustes son accesibles desde el menu de inicio y, cuando corresponda, desde la pausa.
+
+### HU-03 - Salir del juego
+**Historia:** Como jugador, quiero salir desde una opcion visible para cerrar la aplicacion de forma clara.
+
+**Criterios de aceptacion:**
+- La opcion Salir esta disponible desde el menu de inicio.
+- Antes de cerrar, se muestra una confirmacion con opciones para continuar jugando o salir.
+- Cancelar la confirmacion vuelve al menu sin perder el estado de la partida.
+
+### HU-04 - Pausar y reanudar
+**Historia:** Como jugador, quiero pausar y reanudar la partida para continuar leyendo cuando este listo.
+
+**Criterios de aceptacion:**
+- Durante la historia hay una opcion visible para pausar y otra para reanudar.
+- Al pausar se detienen el avance de la historia y las interacciones de juego; la pantalla de pausa ofrece reanudar y abrir ajustes.
+- Al reanudar se conserva la pagina o fragmento y las elecciones realizadas antes de la pausa.
+
+### HU-05 - Interactuar con el texto
+**Historia:** Como jugador, quiero leer texto legible y elegir opciones para participar en el desarrollo de la historia.
+
+**Criterios de aceptacion:**
+- El texto se presenta con tamano, contraste y distribucion que permitan leerlo en la pantalla del dispositivo.
+- Las opciones de interaccion se muestran claramente cuando el relato requiere una eleccion.
+- Al seleccionar una opcion, la historia avanza por la ruta correspondiente y muestra el resultado de la eleccion.
+- La interfaz indica cuando no hay mas texto o decisiones disponibles en el fragmento actual.
+
+## Estado de las observaciones de revision
+
+- [x] La documentacion esta en Markdown y los PDF originales ya no estan en la carpeta docs del repositorio.
+- [ ] Menu, ajustes, salida, pausa e interaccion con el texto: pendientes de implementacion o pruebas, de acuerdo con la revision recibida.
+- [ ] Compilacion automatica: la revision reporta que el proyecto no compila; no se considera resuelta hasta obtener una ejecucion exitosa del flujo de Unity para Android.
+- [x] APK publicado en Releases, segun la revision: [versiones del proyecto](https://github.com/CRiPTA22/juego-maricuentos/releases).
